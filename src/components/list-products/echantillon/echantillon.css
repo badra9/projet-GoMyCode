@@ -1,0 +1,25 @@
+.echantillon{
+    margin-right: 15px;
+    margin-bottom: 20px;
+    background: white;
+    border-radius: 6px;
+    overflow: hidden;
+    width: 202px;
+    height: 250px;
+    border: 1px solid #EEE;
+}
+.echantillon .img-container{
+    height: 100%;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+    /* overflow: hidden;  */
+    /* background-color: rgba(228, 155, 155, .65); */
+    position: relative;
+}
+.infos{
+    position: absolute;
+    width: 100%;
+    top: 5%;
+    text-align: center;
+    
+}

@@ -1,0 +1,239 @@
+/* global rules */
+.img-respensive{
+    width: 100%;
+    height: 100%;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* global rules */
+.panier-container{
+    max-width: 90% ; /*1170px; */
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.selected-products{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+
+    width: 50%;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #d3d3e5;
+    border-radius: 6px;
+}
+.box-product{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 18px;
+}
+.img-panier-container{
+    /* width: 80px;
+    height: 80px; */
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: .5px solid #d9e2e9;
+    padding: 4px;
+    margin-right: 50px;
+    /* centrer le sac */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.info-product p span{
+    font-size: 16px;
+    color: black;
+    font-weight: bold;
+}
+.prix-product{
+    transform: rotate(-16deg);
+}
+.prix-product p{
+    background-color:#2196f3;;
+    color: white;
+    width: 60px;
+    padding: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.prix-Total{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    background-color: #2196f3;
+    padding: 10px 0;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 6px;
+}
+.payement{
+    width: 100%;
+}
+.carte-payement{
+    margin-top: 35px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.carte-payement div{
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.carte-payement div i{
+    font-size: 42px;
+}
+.carte-payement div:first-child label i{
+    color: #15AABF;
+}
+.carte-payement div:nth-of-type(2) label i{
+    color: #F783AC;
+}
+.carte-payement div:nth-of-type(3) label i{
+    color: #4C6EF5;  
+}
+.carte-payement div:nth-of-type(4) label i{
+    color: #FD7E14;  
+}
+.num-carte {
+    /* padding: 15px; */
+    margin-top: 25px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.num-carte input{
+    height: 30px;
+    width: 200px;
+    outline: none;
+    border: 1px solid #2196f3;
+    font-size: 17px;
+    padding-left: 5px;
+    border-radius: 4px;
+}
+.num-carte input::placeholder{
+    font-style: italic;
+}
+.num-carte button{
+    height: 30px;
+    width: 200px;
+    /* padding: 5px; */
+    background-color: #cdd5d17d;
+    color: #2196f3;
+    border: 1px solid #2196f3;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 0;
+    border-radius: 4px;
+}
+
+/* ****** pas de produit choisis par l'utilisateur ******* */
+
+p.aucun-produit{
+    padding: 8px 20px;
+    /* background-color: rgba(228, 155, 155, .65); */
+    background-color: white;
+    border: 1px solid #0a2299;
+    color: #0a2299;
+    border-radius: 6px;
+    margin-top: 20px;
+    /* color: #1c0202; */
+    font-size: 25px;
+    animation: alertAnim 1s 1 ease-in-out;  
+}
+
+@keyframes alertAnim{
+    0%{
+      transform: translateY(-20px);
+      opacity: .3;
+    }
+    50%{
+      transform: translateY(20px);
+      opacity: .6;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+      }
+  }
+
+  /* ****** pas de produit choisis par l'utilisateur ******* */
+
+/* ***** start modal ******* */
+.modal-bg{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity .5s ease-in-out;
+    z-index: 9;
+}
+.bg-active{
+    visibility: visible;
+    opacity: 1;
+}
+.modal-body{
+    background-color: white;
+    width: 30%;
+    height: 250px; /* 30%; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+
+    border-radius: 6px;
+}
+.modal-head{
+    position: relative;
+    width: 100%;
+    border-bottom: 1px solid #b9a2a2;
+    height: 25px;
+}
+.modal-close{
+    position: absolute;
+    top: 0;
+    right: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    color: red;
+}
+.msg{
+    height: 100%;
+    width: 100%; 
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    flex-direction: column;
+    align-content: space-between;
+}
+.msg h2{
+    padding-bottom: 25px;
+}
+
+
+/* ***** start modal ******* */
+
